@@ -7,9 +7,15 @@ module.exports = {
   },
 
   output: {
-    filename: '[name].[chunkhash].bundle.js',
+    filename: '[name].bundle.js',
     // Output path using nodeJs path module
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, "dist")
+  },
+
+  devServer: {
+    contentBase: path.resolve(__dirname, "dist"),
+    compress: true,
+    port: 9000
   },
 
   plugins: [

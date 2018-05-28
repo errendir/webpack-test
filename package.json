@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,6 +14,8 @@
     "babel-runtime": "^6.26.0",
     "emoji-mart": "^2.6.1",
     "react": "^16.4.0",
-    "webpack": "3"
+    "react-dom": "^16.4.0",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.2"
   }
 }

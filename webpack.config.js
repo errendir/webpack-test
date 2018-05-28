@@ -3,7 +3,6 @@ const webpack = require("webpack")
 
 module.exports = {
   entry: {
-    vendor: ["emoji-mart"],
     main: "./index"
   },
 
@@ -15,8 +14,9 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: Infinity
+      children: true,
+      async: true,
+      minChunks: module => /node_modules/.test(module.resource),
     }),
     // new webpack.optimize.CommonsChunkPlugin({
     //   name: 'manifest',
